@@ -1,0 +1,94 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    padding: 15px;
+    font-family: inherit;
+    margin-bottom: 15px;
+    border: 1.5px solid #0c242e;
+    border-radius: 15px;
+}
+
+.form-control:focus {
+    outline: none;
+    color: #0c242e;
+}
+
+.form-control::placeholder {
+    color: rgba(12, 36, 46, 0.5);
+    font-weight: 700;
+}
+
+.sumbitInpt {
+    position: relative;
+    max-width: 200px;
+    padding: 10px 0px;
+    background: transparent;
+    text-transform: uppercase;
+    border: 1.5px solid #e4b248;
+    color: #0c242e;
+    font-weight: 700;
+    border-radius: 15px;
+    transition: all 0.4s;
+}
+
+.sumbitInpt:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #0c242e;
+    right: 0;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.sumbitInpt:hover {
+    background: #0c242e;
+    color: #e4b248;
+    cursor: pointer;
+}
+
+.sumbitInpt:hover:before {
+    height: 100%;
+}
+
+.contact-links {
+    display: block;
+    margin: 15px 0px;
+    color: #0c242e;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.icon-container {
+    text-align: center;
+}
+
+.icon-container svg {
+    font-size: 2em;
+    margin: 10px;
+    color: #f4f4f4;
+    transition: all 0.4s;
+}
+
+.icon-container svg:hover {
+    color: #e4b248;
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .contact-container {
+        display: flex;
+    }
+    .contact-container .form-container,
+    .contact-container .map {
+        width: 50%;
+        padding: 0px 15px;
+    }
+}
